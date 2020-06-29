@@ -1,0 +1,19 @@
+{
+  "name": "natures-nest",
+  "version": "1.0.0",
+  "description": "Natures Nest backend files",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vijayavel-Mohan/natures-nest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vijayavel-Mohan/natures-nest/issues"
+  }
+  
+}
