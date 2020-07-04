@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, Icon, Dropdown ,Badge} from 'rsuite';
+import { Navbar, Nav, Icon, Dropdown, Badge } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 import './NavigationBar.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -10,38 +11,42 @@ export default class NavigationBar extends Component {
     iconSize = "lg";
     baseUrl = this.props.baseUrl;
     state = {
-        onlyLogin:false,
+        onlyLogin: false,
         user: 'User',
-        badgeContent : 34
+        badgeContent: 0
     }
 
-   
+
 
 
     loginDropdownMenu = (onlyLogin) => {
-        if(onlyLogin){
-            return <Nav.Item  href={this.baseUrl + '/login'} icon={< Icon icon='avatar' size={this.iconSize} />} />
+        if (onlyLogin) {
+            return (<Nav.Item icon={< Icon icon='avatar' size={this.iconSize} />}>
+                        <Link className='link' to='/login' />
+                     </Nav.Item>);
         }
-        return (<Dropdown   trigger='hover' icon={<Icon icon="avatar" size={this.iconSize} />} title={this.state.user}>
-                    <Dropdown.Item icon={<Icon icon="bars" size={this.iconSize} />}>My Orders</Dropdown.Item>
-                    <Dropdown.Item icon={<Icon icon="sign-out" size={this.iconSize} />}>Sign Out</Dropdown.Item>
-                </Dropdown>);
+        return (<Dropdown trigger={['click', 'hover']} icon={<Icon icon="avatar" size={this.iconSize} />} title={this.state.user}>
+            <Dropdown.Item icon={<Icon icon="bars" size={this.iconSize} />}>My Orders</Dropdown.Item>
+            <Dropdown.Item icon={<Icon icon="sign-out" size={this.iconSize} />}>Sign Out</Dropdown.Item>
+        </Dropdown>);
     };
 
 
-    notificationBadge = (onlyLogin) =>{
-            this.cartNav =  <Nav.Item  href={this.baseUrl + '/my-cart'} icon={< Icon icon='shopping-cart' size={this.iconSize} />} > Cart </Nav.Item>;
-            if(onlyLogin || this.state.badgeContent === 0){
-              return this.cartNav;
-            }
-            return  (<Badge  maxCount={9} content={this.state.badgeContent} children={this.cartNav}/> );
+    notificationBadge = (onlyLogin) => {
+        this.cartNav = (<Nav.Item icon={< Icon icon='shopping-cart' size={this.iconSize} />} >
+                             <Link className='link' to='/my-cart'> Cart</Link>
+                         </Nav.Item>);
+        if (onlyLogin || this.state.badgeContent === 0) {
+            return this.cartNav;
+        }
+        return (<Badge maxCount={9} content={this.state.badgeContent} children={this.cartNav} />);
     }
 
 
 
     render() {
-        const { onlyLogin} = this.state;
-        this.loginButtonComponent =  this.loginDropdownMenu(onlyLogin);
+        const { onlyLogin } = this.state;
+        this.loginButtonComponent = this.loginDropdownMenu(onlyLogin);
         this.notificationBadgeComponent = this.notificationBadge(onlyLogin);
         return (
             <div className='nav-wrapper' >
@@ -51,19 +56,28 @@ export default class NavigationBar extends Component {
                             <img src={process.env.PUBLIC_URL + '/assets/images/log.png'} alt='' />
                         </a>
                     </Navbar.Header>
-                    
+
                     <Navbar.Body >
                         <Nav pullRight >
-                            <Nav.Item  href={this.baseUrl} icon={< Icon icon='home' size={this.iconSize} />} > Home </Nav.Item>
-                            <Nav.Item  href={this.baseUrl + '/about-us'} icon={< Icon icon='peoples' size={this.iconSize} />} > About Us </Nav.Item>
-                            <Nav.Item  href={this.baseUrl + '/shop'} icon={< Icon icon='shopping-bag' size={this.iconSize} />} > Shop </Nav.Item>
-                             {this.notificationBadgeComponent}
-                            <Nav.Item  href={this.baseUrl + '/contact-us'} icon={< Icon icon='phone-square' size={this.iconSize} />} > Contact </Nav.Item>
+                            <Nav.Item icon={< Icon icon='home' size={this.iconSize} />}>
+                                <Link className='link' to='/'> Home </Link>
+                            </Nav.Item>
+                            <Nav.Item icon={< Icon icon='peoples' size={this.iconSize} />} >
+                                <Link className='link' to='/about-us'>About Us</Link>
+                            </Nav.Item>
+                            <Nav.Item icon={< Icon icon='shopping-bag' size={this.iconSize} />} >
+                                <Link className='link' to='/shop'>Shop</Link>
+                            </Nav.Item>
+                            {this.notificationBadgeComponent}
+                            <Nav.Item  icon={< Icon icon='phone-square' size={this.iconSize} />} >
+                                <Link className='link' to='/contact'>Contact</Link>
+                            </Nav.Item>
                             {this.loginButtonComponent}
                         </Nav >
                     </Navbar.Body>
                 </Navbar >
             </div >
+
         );
     }
 }

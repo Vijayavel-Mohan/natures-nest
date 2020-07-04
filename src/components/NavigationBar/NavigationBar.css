@@ -13,52 +13,80 @@
     font-weight: bold;
     font-size: 16px;
     color:whitesmoke !important;
+    text-decoration: none;
+    background-color:#88b44e !important;
 }
 
 .rs-nav-item .rs-nav-item-content:hover{
-    color:#88b44e !important;
+    transition: all 0.5s ease;
+    color:#64676d !important;
+    text-decoration: none;
     background-color: white !important;
 }
+
 
 .rs-dropdown .rs-btn:hover{
-    color:#88b44e !important;
+    color:#64676d !important;
 }
-
 .rs-dropdown .rs-btn-subtle:focus{
-    color:#88b44e !important;
+    color:#64676d !important;
     background-color: white !important;
 }
-
-
 .rs-dropdown .rs-btn:active{
     color:#88b44e !important;
 }
 .rs-dropdown .rs-btn{
     font-weight: bold;
     font-size: 16px;
-    color:whitesmoke !important;
+    color:#64676d !important;
 }
-
 .rs-dropdown .rs-dropdown-menu{
     background-color: #88b44e;
     font-size: 16px;
 }
-
 .rs-dropdown-menu .rs-dropdown-item-content {
-    color:white;
+    color:#64676d;
     padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
 }
-
 .rs-dropdown-menu .rs-dropdown-item-content:hover {
-    color:#88b44e !important;
     background-color: white !important;
 }
+.rs-dropdown-menu .rs-dropdown-item-content .rs-icon:hover{
+    color:#64676d ;
+}
 
+
+.rs-dropdown .rs-icon{
+    color:#64676d;
+}
+
+.rs-nav-item .rs-icon{
+    color:#64676d;
+}
+
+.rs-dropdown .rs-icon:hover{
+    color:#64676d !important;
+}
 
 .rs-badge .rs-badge-content {
     position: absolute;
     top: 15px !important;
-    right: 46px !important;
+    right: 52px !important;
     transform: translate(50%, -50%);
     z-index: 1;
 }
+
+a.link {
+    color:#64676d;
+    text-decoration: none !important;
+    padding: 1.1rem 0;
+}
+
+a.link:hover{
+    color:#64676d;
+    text-decoration: none !important;
+}
+
+
