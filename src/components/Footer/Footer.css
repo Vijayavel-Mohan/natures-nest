@@ -1,0 +1,27 @@
+.mdb-color {
+    background-image:url('/assets/images/footer-img.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: 1500px 700px;
+
+}
+
+footer.page-footer{
+    color:white !important;
+    font-size: 1em;
+}
+
+footer.page-footer .headings{
+    color:white !important;
+}
+
+footer.page-footer a {
+    color:white !important;
+    font-weight: bolder !important;
+}
+
+.footer-copyright{
+    font-weight: bolder !important;
+    font-size: 16px;
+}
