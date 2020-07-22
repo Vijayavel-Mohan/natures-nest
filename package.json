@@ -3,19 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.2.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "lord-icon-element": "^1.2.3",
+    "lottie-web": "^5.7.0",
     "material-ui": "^0.20.2",
+    "materialize-css": "^1.0.0-rc.2",
     "mdbreact": "^4.27.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.1.1",
     "react-dom": "^16.13.1",
     "react-fontawesome": "^1.7.1",
     "react-helmet": "^6.1.0",
     "react-loader-spinner": "^3.1.14",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "rsuite": "^4.7.5"
+    "rsuite": "^4.7.5",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
     "start": "react-scripts start",
