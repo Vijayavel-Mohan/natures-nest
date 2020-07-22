@@ -1,0 +1,31 @@
+.mdb-color {
+    background-image:url('/assets/images/footer-img.jpg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 1500px 700px;
+    filter: grayscale(30%);
+
+}
+
+footer.page-footer{
+    color:black !important;
+    font-size: 1em;
+}
+
+footer.page-footer .headings{
+    color:black !important;
+}
+
+footer.page-footer a {
+    color:black !important;
+    font-weight: bolder !important;
+}
+
+.footer-copyright{
+    font-weight: bolder !important;
+    font-size: 16px;
+}
+
+.mt-4{
+    margin-top: 10em !important;
+}

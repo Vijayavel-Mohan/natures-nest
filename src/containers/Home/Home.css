@@ -1,0 +1,25 @@
+.card-deck{
+    margin: 100px 50px;
+}
+
+.card-deck {
+    animation:rotate-in-2-fwd-cw 4.5s cubic-bezier(.25,.46,.45,.94) both;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  body{
+       background-image: url('/assets/images/theme-background.jpg');
+      background-repeat: no-repeat;
+      background-position:50%; 
+      background-size:cover;
+      overflow-y: auto;
+      overflow-x: hidden;
+  }
+
+@keyframes rotate-in-2-fwd-cw{0%{transform:translateZ(-200px) rotate(-45deg);opacity:0}100%{transform:translateZ(0) rotate(0);opacity:1}}

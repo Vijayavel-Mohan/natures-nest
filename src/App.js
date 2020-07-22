@@ -1,8 +1,11 @@
-import React from 'react';
+import React,{ lazy, Suspense } from 'react';
 import {Helmet} from "react-helmet";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
-import NavigationBar from './components/NavigationBar/NavigationBar';
+import NavBar from './components/NavigationBar/NavigationBar';
+import FooterPage from './components/Footer/Footer';
+import Home from './containers/Home/Home';
+
 
 
 function App() {
@@ -13,20 +16,20 @@ function App() {
                 <meta charSet="utf-8" />
                 <title>Nature's Nest</title>
           </Helmet>
-          <BrowserRouter basename="/natures-nest">
-          <NavigationBar baseUrl="/natures-nest"/>
+          <BrowserRouter>
+          <NavBar/>
              <Switch>
-                <Route exact path='/'/>
+                <Route exact  path='/natures-nest' component={Home}/>
                 <Route exact path='/about-us'/>
                 <Route exact path='/shop'/>
+                <Route exact path='/my-cart'/>
                 <Route exact path='/contact'/>
                 <Route exact path='/login'/>
+                <Redirect to='/natures-nest'/>
              </Switch>
           </BrowserRouter>
           </header>
-          <footer>
-            
-          </footer>
+            <FooterPage/>
     </div>
   );
 }

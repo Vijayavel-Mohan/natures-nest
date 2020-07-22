@@ -1,0 +1,38 @@
+.featurette {
+    width: 1345 px;
+    height:400px;
+    margin: 10px 50px;
+    padding: 30px;    
+}
+  
+  .featurette-image {
+    margin-top: 3px; 
+    padding: 10px;
+  }
+  
+  .featurette-image.img-left {
+    margin-right: 40px;
+    float:left;
+  }
+  
+  .featurette-image.img-right {
+    margin-left: 40px;
+    float:right;
+  }
+  
+  /* Thin out the marketing headings */
+  .featurette-heading {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-top:115px ;
+  }
+
+  
+  .lead{
+    width: 1245px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+  }
