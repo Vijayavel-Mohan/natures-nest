@@ -29,7 +29,7 @@ function App() {
              </Switch>
           </BrowserRouter>
           </header>
-            <FooterPage/>
+            {/*<FooterPage/>*/}
     </div>
   );
 }

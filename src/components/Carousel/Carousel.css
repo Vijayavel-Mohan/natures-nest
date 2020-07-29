@@ -1,4 +1,5 @@
-#image-carousel .carousel-item .mask {
+
+  #image-carousel .carousel-item .mask {
     position: absolute;
     top: 0;
 	left:0;
@@ -256,4 +257,22 @@ background-image: url('/assets/images/img-slider-1.jpg');
 .slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
+}
+
+@media screen and (width:320px){
+  #image-carousel{
+    width: 320px !important;
+  }
+}
+
+@media screen and (width:375px){
+  #image-carousel{
+    width: 375px !important;
+  }
+}
+
+@media screen and (width:425px){
+  #image-carousel{
+    width: 425px !important;
+  }
 }
