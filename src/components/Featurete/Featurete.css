@@ -1,5 +1,5 @@
 .featurette {
-    width: 1345 px;
+    width: 1345px;
     height:400px;
     margin: 10px 50px;
     padding: 30px;    
@@ -35,4 +35,27 @@
     height: 100px;
     margin: 10px;
     text-align: center;
+  }
+
+  @media screen and (max-width:320px){
+    .featurette {
+      width: 394px;
+      height:600px;
+      margin: 10px 10px;
+      padding: 30px;    
+      padding-top: 0px;
+  }
+
+  .lead{
+    width: 320px;
+    height: 100px;
+    text-align: center;
+  }
+
+  .featurette-image {
+    width: 320px;
+    height: 400px;
+    margin: 0px;
+  }
+
   }

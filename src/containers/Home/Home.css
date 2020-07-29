@@ -13,13 +13,24 @@ hr {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  body{
-       background-image: url('/assets/images/theme-background.jpg');
-      background-repeat: no-repeat;
-      background-position:50%; 
-      background-size:cover;
-      overflow-y: auto;
-      overflow-x: hidden;
-  }
+
 
 @keyframes rotate-in-2-fwd-cw{0%{transform:translateZ(-200px) rotate(-45deg);opacity:0}100%{transform:translateZ(0) rotate(0);opacity:1}}
+
+@media screen and (max-width:375px){
+    hr{
+        width: 375px;
+    }
+}
+
+@media screen and (max-width:320px){
+    hr{
+        width: 320px;
+    }
+}
+
+@media screen and (max-width:425px){
+    hr{
+        width: 425px;
+    }
+}

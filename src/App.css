@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+/*body{
+  background-image: url('/assets/images/theme-background.jpg');
+ background-repeat: no-repeat;
+ background-position:50%; 
+ background-size:cover;
+ overflow-y: auto;
+ overflow-x: hidden;
+}*/
