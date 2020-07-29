@@ -5,6 +5,7 @@ import './App.css';
 import NavBar from './components/NavigationBar/NavigationBar';
 import FooterPage from './components/Footer/Footer';
 import Home from './containers/Home/Home';
+import Login from './containers/Login/Login';
 
 
 
@@ -24,7 +25,7 @@ function App() {
                 <Route exact path='/shop'/>
                 <Route exact path='/my-cart'/>
                 <Route exact path='/contact'/>
-                <Route exact path='/login'/>
+                <Route exact path='/login' component={Login}/>
                 <Redirect to='/natures-nest'/>
              </Switch>
           </BrowserRouter>
